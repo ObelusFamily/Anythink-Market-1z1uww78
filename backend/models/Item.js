@@ -53,6 +53,7 @@ ItemSchema.methods.toJSONFor = function(user) {
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
     tagList: this.tagList,
+    isVerified: user.isVerified,
     favorited: user ? user.isFavorite(this._id) : false,
     favoritesCount: this.favoritesCount,
     seller: this.seller.toProfileJSONFor(user)
